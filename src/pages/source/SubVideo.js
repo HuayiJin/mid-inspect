@@ -20,7 +20,7 @@ import {
 
 
 class DesktopContainer extends Component {
-    state = {}
+    
 
     render() {
         const { children } = this.props
@@ -31,37 +31,34 @@ class DesktopContainer extends Component {
     }
 }
 
+function SimpleImage(props) {
+    console.log(props.imagename)
+    const source = "http://202.120.60.31:5000/" + props.imagename + ".jpg"
 
-const SimpleImage = ({ imagename }) => (
-    <Grid style={{
-        margin:"0em 0em 0.5em 0em"
-    }}>
-        <GridRow>
-            <GridColumn width={8}>
-                <Image src="http://202.120.60.31:5000/0001.jpg" />
-            </GridColumn>
-            <GridColumn width={8}>
-                <Label as='a' color='blue' tag>
-                    New
-        </Label>
+    return (
+        <Grid style={{
+            margin:"0em 0em 0.5em 0em"
+        }}>
+            <GridRow>
+                <GridColumn width={8}>
+                    <Image src={source} />
+                </GridColumn>
+                <GridColumn width={8}>
+                    <h4>
+                        {props.describe}
+                    </h4>
+                </GridColumn>
+            </GridRow>
+        </Grid>
+    )
+}
 
-                <Label as='a' color='red' tag>
-                    Upcoming
-        </Label>
-
-                <Label as='a' color='teal' tag>
-                    Featured
-        </Label>
-            </GridColumn>
-        </GridRow>
-    </Grid>
-)
 
 const SubVideoContainer = ({ }) => (
-    <Container //主视频
+    <Container 
         style={{
-            //background: 'yellow',
-            padding: '1em 6em 0em 0em',
+            background: '#eeeeee',
+            padding: '1em',
             height: '100%'
         }}
 
@@ -77,7 +74,6 @@ const SubVideoContainer = ({ }) => (
             <Container
                 style={{
                     padding: "2em 1.8em 1em 1.8em",
-                    color: 'blue'
                 }}
             >
                 <Header inverted size='large' style={{
@@ -89,20 +85,23 @@ const SubVideoContainer = ({ }) => (
             <Container
                 style={{
                     padding: "0em 2em 0em 1em",
-                    color: 'blue'
                 }}
             >
                 <Menu.Item>
-                    <SimpleImage />
+                    <SimpleImage imagename='0007' 
+                    describe='白天；雨天；行驶车辆右转弯；危险对象：小型车；危险对象行为：直行前进；非路口；路面湿滑；有道路标志线；城镇'/>
                 </Menu.Item>
                 <Menu.Item>
-                    <SimpleImage />
+                    <SimpleImage imagename='0011'
+                    describe='白天；雨天；行驶车辆直行前进；危险对象：小型车；危险对象行为：超车；非路口；路面湿滑；有道路标志线；乡村'/>
                 </Menu.Item>
                 <Menu.Item>
-                    <SimpleImage />
+                    <SimpleImage imagename='0014'
+                    describe='白天；雨天；行驶车辆直行前进；危险对象：小型车；危险对象行为：掉头；掉头路口；路面干燥；有道路标志线；乡村'/>
                 </Menu.Item>
                 <Menu.Item>
-                    <SimpleImage />
+                    <SimpleImage imagename='0045'
+                    describe='白天；雨天；行驶车辆直行前进；危险对象：小型车；危险对象行为：急停；十字路口；路面湿滑；有道路标志线；乡村'/>
                 </Menu.Item>
             </Container>
         </Container>

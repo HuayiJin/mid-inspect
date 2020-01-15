@@ -156,23 +156,22 @@ const Dropdown9 = () => (
 
 const SimpleSidebar = ({ }) => (
     <Container
-        minHeight='90em'
         style={{
-            padding: "1em 1em 1em 5em",
+            height: '100%',
+            padding: "1em",
+            background: '#eeeeee',
         }}
 
     >
         <Container
             style={{
-                padding: "0em 0em 10em 0em",
-                background: '#eeeeee'
+                padding: "0em 0em 2em 0em",
             }}
-
         >
             <Menu.Item >
                 <Container
                     style={{
-                        padding: "1.6em 1.8em 0.5em 1.8em",
+                        padding: "1.6em 1.8em 1em 1.8em",
                         color: 'blue'
                     }}
                 >
@@ -228,6 +227,17 @@ const SimpleSidebar = ({ }) => (
                     <Dropdown9 />
                 </DropContainer>
             </Menu.Item>
+        </Container>
+        <Container
+            style={{
+                height:'5em',
+                padding:'1em 2em 0em 2em'
+            }}
+        >
+            <Button 
+                primary
+                floated='right'
+            >搜索</Button>
         </Container>
     </Container>
 )

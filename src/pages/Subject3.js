@@ -27,7 +27,7 @@ class Subject3Container extends Component {
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
         <Container style={{
-          padding:'1em',
+          padding:'1.5em 5em 1em 5em',
           minHeight: '70em',
           width:'100%'
         }}

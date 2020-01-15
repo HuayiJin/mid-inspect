@@ -50,34 +50,50 @@ const VideoContainer = ({ }) => (
     >
         <Container
             style={{
-                padding: '0em 1em 0em 1em',
+                padding: '0em 1em 3em 1em',
             }}
             fluid
         >
             <video id="video1" controls width="100%">
-                <source src="http://202.120.60.31:5000/0040.mp4" type="video/mp4"></source>
+                <source src="http://202.120.60.31:5000/0009.mp4" type="video/mp4"></source>
             </video>
         </Container>
         <Container
             style={{
-                padding: '2em 3em 0em 3em',
+                padding: '1em',
             }}
         >
-            <h3>
+            <h2>
                 视频描述
-            </h3>
-            <Label as='a' color='blue' tag>
-                New
+            </h2>
+            <Label as='a' color='blue' size='large' style={{margin:'1em'}} tag>
+                白天
+            </Label>
+            <Label as='a' color='brown'  size='large' style={{margin:'1em'}} tag>
+                雨天
+            </Label>
+            <Label as='a' color='green'  size='large' style={{margin:'1em'}} tag>
+                行驶车辆右转弯
+            </Label>
+            <Label as='a' color='grey'  size='large' style={{margin:'1em'}} tag>
+                危险对象右转弯
+            </Label>
+            <Label as='a' color='olive'  size='large' style={{margin:'1em'}} tag>
+                危险对象：小型车
+            </Label>
+            <Label as='a' color='orange'  size='large' style={{margin:'1em'}} tag>
+                丁字路口
+            </Label>
+            <Label as='a' color='pink'  size='large' style={{margin:'1em'}} tag>
+                路面湿滑
+            </Label>
+            <Label as='a' color='purple'  size='large' style={{margin:'1em'}} tag>
+                有道路标志线
+            </Label>
+            <Label as='a' color='red'  size='large' style={{margin:'1em'}} tag>
+                乡村
             </Label>
         
-            <Label as='a' color='red' tag>
-                Upcoming
-            </Label>
-        
-            <Label as='a' color='teal' tag>
-                Featured
-            </Label>
-               
         </Container>
     </Container>
 )
