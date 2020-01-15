@@ -74,7 +74,7 @@ class MyHeader extends Component {
                                     to="/subject1"
                                     active={activeItem === 'Subject1'}
                                     onClick={this.handleItemClick}
-                                >课题一</Menu.Item>
+                                >在线运行监控</Menu.Item>
                                 <Menu.Item
                                     name='Subject3'
                                     as={ Link }
